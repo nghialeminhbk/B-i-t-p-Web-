@@ -1,0 +1,33 @@
+*{
+    box-sizing: border-box;
+}
+
+header{
+    background-color: brown;
+}
+
+section{
+    background-color: chocolate;
+}
+
+footer{
+    background-color: crimson;
+}
+
+nav{
+    float: left;
+    width: 30%;
+    height: 300px;
+}
+
+article{
+    float: left;
+    height: 300px;
+    width: 70%;
+}
+
+section::after{
+    content: "";
+    display: table;
+    clear: both;
+}

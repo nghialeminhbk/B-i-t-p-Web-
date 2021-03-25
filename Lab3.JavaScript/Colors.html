@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            list-style: none;
+            background: greenyellow;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            width: 150px;
+            height: 40px;
+            border-radius: 25px;
+            font-weight: 700;
+        }
+        li a{
+            text-decoration: none;
+        }
+        li{
+            display: inline-block;
+            margin-right: 10px;
+            transition: all .3s;
+        }
+        p{
+            color: black;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        li:hover{
+            transform: scale(1.5);
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function changeColorRed(element){
+            element.style.color = "red";
+        }
+        function changeColorBlue(element){
+            element.style.color = "blue";
+        }
+        function changeColorGreen(element){
+            element.style.color = "green";
+        }
+        function resetColor(element){
+            element.style.color = "black";
+        }
+    </script>
+    <ul id="list">
+        <li onmouseover="changeColorRed(document.getElementById('px'))"  onmouseout="resetColor(document.getElementById('px'))"><a style="color: red;" href="#">Red</a></li>
+        <li onmouseover="changeColorBlue(document.getElementById('px'))"  onmouseout="resetColor(document.getElementById('px'))"><a style="color: blue;" href="#">Blue</a></li>
+        <li onmouseover="changeColorGreen(document.getElementById('px'))"  onmouseout="resetColor(document.getElementById('px'))"><a style="color: green;" href="#">Green</a></li>
+    </ul>
+    <p id="px">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias aliquid consequatur ducimus assumenda at, nihil ratione voluptates corporis tempora sapiente!
+    </p> 
+</body>
+</html>
