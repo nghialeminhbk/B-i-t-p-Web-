@@ -1,54 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ex2</title>
     <style>
+        html{
+            height: 100vh;
+        }
+        .container {
+            border: 2px blue solid;
+            padding: 30px 0px;
+            height: 600px;
+            width: 600px;
+            border-radius: 15px;
+            margin: 0 auto;
+        }
 
+        img {
+            border-radius: 5px;
+            border: 2px blue solid;
+        }
+
+        .personal {
+            position: relative;
+            left: 40px;
+        }
+
+        /*---media query----*/
+        /*------------------*/
+        /* Big tablet to 1200px; */
+        @media only screen and (max-width:1200px) {}
+
+        /* Small tablet to big tablet from 768x to 1023px */
+        @media only screen and (max-width:1023px) {
+        }
+
+        /* Small phones to small tablets */
+        @media only screen and (max-width: 767px) {
+            .container {
+            height: 600px;
+            width: 480px;
+            border-radius: 15px;
+            margin: 0 auto;
+        }
+
+        .personal {
+            position: relative;
+            left: 20px;
+        }
+
+        }
+
+        /* Small phones from 0 to 480px; */
+        @media only screen and (max-width: 480px) {
+            .container {
+            height: 600px;
+            width: 400px;
+            border-radius: 15px;
+            margin: 0 auto;
+        }
+        }
     </style>
 </head>
+
 <body>
-    <table width="80%" align="center" border="1px" cellspacing="0" style="border-bottom: 0px;">
-        <tr height="100px">
-            <td width="70%" valign="top">Personal Detail</td>
-            <td valign="top">Image</td>
-        </tr>
-    </table>
-    <table width="80%" align="center" border="1px" cellspacing="0">
-        <tr height="20px">
-            <td width="30%">Education process</td>
-            <td ></td>
-        </tr>
-        <tr height="20px">
-            <td width="30%">Working process</td>
-            <td ></td>
-        </tr>
-        <tr height="20px">
-            <td width="30%">Society activities</td>
-            <td ></td>
-        </tr>
-        <tr height="20px">
-            <td width="30%">Skills</td>
-            <td ></td>
-        </tr>
-        <tr height="20px">
-            <td width="30%">Experiences</td>
-            <td ></td>
-        </tr>
-        <tr height="20px">
-            <td width="30%">Certifications</td>
-            <td ></td>
-        </tr>
-        <tr height="20px">
-            <td width="30%">Hobbies</td>
-            <td ></td>
-        </tr>
-        <tr height="20px">
-            <td width="30%">Desire</td>
-            <td ></td>
-        </tr>
-    </table>
+    <div class="container" align="center">
+        <table width="90%" align="center" border="0px" cellspacing="0" style="border-bottom: 0px;">
+            <tr width="30%" height="100px">
+                <td valign="top" style="display: flex; flex-direction: column; align-items: center;"><span
+                        style="margin-bottom: 5px;">Image</span>
+                    <img src="https://i.ytimg.com/vi/ayOgrUsIbIs/maxresdefault.jpg" style="width: 150px; height: 200px;"
+                        alt="">
+                </td>
+                <td width="70%" valign="top">
+                    <div class="personal">
+                        <span>Personal Detail</span>
+                        <br>
+                        <br>
+                        <ul>
+                            <li>Name: Tham Thanh Hoa</li>
+                            <li>Age: 21</li>
+                            <li>Country: China</li>
+                            <li>Phone: 0328741866</li>
+                            <li>Address: Hai Ba Trung district, Ha Noi city, VietNam</li>
+                            <li>Boyfriend: Co Dieu Dong</li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <br>
+        <br>
+        <br>
+        <table width="90%" align="center" style="border: 1px;" cellspacing="0">
+            <tr height="30px">
+                <td width="30%">Education process</td>
+                <td>Thanh Hoa university</td>
+            </tr>
+            <tr height="30px">
+                <td width="30%">Working process</td>
+                <td>Director at Co Dieu Dong theater</td>
+            </tr>
+            <tr height="30px">
+                <td width="30%">Society activities</td>
+                <td>Volunteer in China Volunteer</td>
+            </tr>
+            <tr height="30px">
+                <td width="30%">Skills</td>
+                <td>HTML, CSS, JS</td>
+            </tr>
+            <tr height="30px">
+                <td width="30%">Experiences</td>
+                <td> 5 years</td>
+            </tr>
+            <tr height="30px">
+                <td width="30%">Certifications</td>
+                <td>None</td>
+            </tr>
+            <tr height="30px">
+                <td width="30%">Hobbies</td>
+                <td>Music, books, film, cartoon, coding...</td>
+            </tr>
+            <tr height="30px">
+                <td width="30%">Desire</td>
+                <td>Become a pro developer.</td>
+            </tr>
+        </table>
+    </div>
 </body>
+
 </html>
