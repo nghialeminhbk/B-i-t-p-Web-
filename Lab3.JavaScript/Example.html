@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var myArray = new Array();
+        myArray.push("Tim");
+        myArray.push("Jan");
+        myArray.push("Joe");
+        document.writeln(myArray.toString());
+        document.writeln("<br>");
+
+        document.writeln(myArray[1]);
+        document.writeln("<br>");
+        document.writeln("My length array:" + myArray.length);
+        document.writeln("<br>");
+        document.writeln("<br>");
+        document.writeln("<br>"); 
+
+        var otherArray = new Array("dog", 3 , 8.4);
+        document.writeln(otherArray.toString());
+        document.writeln("<br>");
+        document.writeln("<br>");
+
+        otherArray["key"] = "value";
+        document.writeln(otherArray["key"]);
+        document.writeln("<br>");
+
+        document.writeln("<hr>");
+
+        // Open new window
+        if(window.confirm("Open Google?")){
+            newWindow = window.open('http://www.google.com', 'NewGoogleWindow', 'toolbar=no, alwaysRaised=yes');
+            newWindow.focus();
+        }
+
+        // Count the Function calls
+
+        num = 0;
+        function myFunc(){
+            num++;
+            document.myForm1.outputField.value = "Called " + num + " times";
+        }
+        window.setInterval("myFunc()", 1000);
+
+        // set control' attibutes
+
+        function setAlign( align ){
+            var pTag = window.document.getElementById("paragraph");
+            pTag.setAttribute("align", align);
+        }
+
+        // Add text fields
+
+        var inputs = 1;
+
+        function addField(){
+            inputs++;
+            var form = document.getElementById("sweet-form");
+            var line_break = document.createElement("br");
+            var textbox = document.createElement('input');
+            textbox.setAttribute('type','text');
+            textbox.setAttribute('name', 'text_'+inputs);
+            textbox.setAttribute('value', 'I am box #'+inputs);
+            form.appendChild(line_break);
+            form.appendChild(textbox); 
+            return false;
+        }
+
+        function doLoad(){
+            document.getElementById("sweet-link").addEventListener('click', addField, false);
+        }
+        window.addEventListener('load', doLoad, false);
+
+
+        // Validate PostalCode and Money (Regular Expression)
+        function validatePostalCode(){
+            var postalCodeCheck = new RegExp("([A-Z][0-9]){3,3}");
+            if(postalCodeCheck.test(document.myForm.postalCodeField.value)){
+                alert("Valide Postal Code");
+                return true;
+            }else{
+                alert("Invalid Postal Code: " + document.myForm.postalCodeField.value );
+                return false;
+            }
+        }
+
+        function validateMoney(){
+            var moneyCheck = new RegExp("[0-9]*[\.][0-9][0-9]");
+            if(moneyCheck.test(document.myForm.moneyField.value)){
+                alert("Valid Money");
+                return true;
+            }else{
+                alert("Invalid Money: " + document.myForm.moneyField.value);
+                return false;
+            }
+        }
+
+    </script>
+
+    
+    <form action="" name="myForm1">
+        <input type="text" name="outputField" readonly>
+    </form>
+    <hr><br><br>
+    <form name="alignForm">
+        <select name="" id="alignSelect">
+            <option value="left">left</option>
+            <option value="right">right</option>
+            <option value="center">center</option>
+        </select>
+        <input type="button" value="go" onclick="setAlign(document.alignForm.alignSelect.value)">
+    </form>
+    <br>
+    <p id="paragraph">
+        This is some sample text;
+    </p>
+    <hr><br><br>
+    <form action="" id="sweet-form">
+        <input type="text" name="text_1" value="I am box #1">
+    </form>
+    <a href="#" id="sweet-link">Add Text Field</a>
+    <hr><br><br>
+    <form name="myForm">
+        Postal Code: <input type="text" name="postalCodeField"> <input type="button" value="Check Postal Code" onclick="validatePostalCode()"> <br><br><br>
+        Money: <input type="text" name="moneyField"> <input type="button" value="Check Money" onclick="validateMoney()">
+    </form>
+</body>
+</html>

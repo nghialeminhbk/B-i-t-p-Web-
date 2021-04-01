@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>left</title>
+    <style>
+        html {
+            background-color: rgb(175, 175, 240);
+        }
+
+        body {
+            font-size: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+        .content{
+            padding: 10px 10px;
+            background: rgba(255, 255, 255, 0.4);
+        }
+        .line-content {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        span {
+            font-size: 20px;
+            font-weight: 400;
+            width: 20%;
+        }
+
+        p {
+            width: 80%;
+            border-bottom: solid 1px rgb(190, 185, 185);
+        }
+
+        #c3 {
+            border-bottom: solid 1px rgb(199, 182, 182);
+        }
+    </style>
+</head>
+
+<body onload="displayData()">
+    <script>
+        function getCookie(cname) {
+            var name = cname + "=";
+            var decodedCookie = decodeURIComponent(document.cookie);
+            var ca = decodedCookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+
+        function displayData() {
+            document.getElementById("c1").innerHTML = getCookie("name");
+            document.getElementById("c2").innerHTML = getCookie("author");
+            document.getElementById("c3").innerHTML = getCookie("content");
+        }
+    </script>
+    <h1>BLOG!</h1>
+    <!-- <button onclick="displayData()">Click here!</button><br> -->
+    <div class="content">
+        <div class="line-content"><span id="name">Blog's name: </span>
+            <p id="c1"></p>
+        </div>
+        <div class="line-content"><span id="author">Author: </span>
+            <p id="c2"></p>
+        </div>
+        <div class="line-content"><span id="content">Content: </span>
+            <p id="c3"></p>
+        </div>
+    </div>
+</body>
+
+</html>
