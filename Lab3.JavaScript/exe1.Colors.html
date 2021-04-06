@@ -7,23 +7,20 @@
     <title>Document</title>
     <style>
         ul{
-            list-style: none;
-            background: greenyellow;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
-            width: 150px;
-            height: 40px;
-            border-radius: 25px;
-            font-weight: 700;
+            background-color: rgb(173, 241, 71); 
+            height: 30px;
+            padding-top: 15px;
+            width: 250px;
+            border-radius: 12px;
         }
         li a{
             text-decoration: none;
+            font-weight: 700;
         }
+        
         li{
             display: inline-block;
-            margin-right: 10px;
+            margin-right: 20px;
             transition: all .3s;
         }
         p{
@@ -52,9 +49,9 @@
         }
     </script>
     <ul id="list">
-        <li onmouseover="changeColorRed(document.getElementById('px'))"  onmouseout="resetColor(document.getElementById('px'))"><a style="color: red;" href="#">Red</a></li>
-        <li onmouseover="changeColorBlue(document.getElementById('px'))"  onmouseout="resetColor(document.getElementById('px'))"><a style="color: blue;" href="#">Blue</a></li>
-        <li onmouseover="changeColorGreen(document.getElementById('px'))"  onmouseout="resetColor(document.getElementById('px'))"><a style="color: green;" href="#">Green</a></li>
+        <li onmouseover="changeColorRed(document.getElementById('px'))"  onmouseout="resetColor(document.getElementById('px'))"><a style="color: red;" href="#">RED</a></li>
+        <li onmouseover="changeColorGreen(document.getElementById('px'))"  onmouseout="resetColor(document.getElementById('px'))"><a style="color: green;" href="#">GREEN</a></li>
+        <li onmouseover="changeColorBlue(document.getElementById('px'))"  onmouseout="resetColor(document.getElementById('px'))"><a style="color: blue;" href="#">BLUE</a></li>
     </ul>
     <p id="px">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias aliquid consequatur ducimus assumenda at, nihil ratione voluptates corporis tempora sapiente!
