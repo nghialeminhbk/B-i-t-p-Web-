@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+</head>
+<body>
+    <font size="4" color="blue">Inventory Search</font>
+    <form action="search.php" method="POST">
+        <table>
+            <tr>
+                <td>Enter product to search for</td>
+                <td><input type="text" name="search" id="search" required></td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td><button>Click To Submit</button></td>
+                <td><button type="button" onclick="Reset()">Reset</button></td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        $search = document.querySelector('#search');
+        function Reset(){
+            $search.value = '';
+        }
+    </script>
+</body>
+</html>

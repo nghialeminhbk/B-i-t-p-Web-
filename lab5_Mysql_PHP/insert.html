@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert</title>
+</head>
+<body>
+    <form action="insert_table.php" method="POST">
+        <table>
+            <tr>
+                <td>Item Description</td>
+                <td><input type="text" name="des" required></td>
+            </tr>
+            <tr>
+                <td>Weight</td>
+                <td><input type="text" name="weight" required></td>
+            </tr>
+            <tr>
+                <td>Cost</td>
+                <td><input type="text" name="cost" required></td>
+            </tr>
+            <tr>
+                <td>Number Available</td>
+                <td><input type="text" name="num" required></td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td><button>Click To Submit</button></td>
+                <td><button type="button" onclick="reset()">Reset</button></td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        let input = document.getElementsByTagName("input");
+        function reset(){
+            for(var i = 0; i<input.length; i++){
+                input[i].value = '';
+            }
+        }
+    </script>
+</body>
+</html>
