@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed layout design with floating boxes</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        #header{
+            background: #0f0;
+            width: 800px;
+            height: 100px;
+
+        }
+        #leftcol{
+            background: #f00;
+            width: 150px;
+            height: 500px;
+            float: left;
+        }
+        #content{
+            background: #f8c3a4;
+            width: 500px;
+            height: 500px;
+            float: left;
+        }
+        #rightcol{
+            background: #f00;
+            width: 150px;
+            height: 500px;
+            float: left;
+        }
+        #footer{
+            background: #0f0;
+            clear: both;
+            width: 800px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">Header Section</div>
+    <div id="leftcol">Left Section</div>
+    <div id="content">Content Section</div>
+    <div id="rightcol">Right Section</div>
+    <div id="footer">Footer Section</div>
+
+</body>
+
+</html>
