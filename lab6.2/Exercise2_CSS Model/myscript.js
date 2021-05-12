@@ -1,4 +1,5 @@
 var content = document.getElementById("content");
+
 function load(url) {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
@@ -9,6 +10,8 @@ function load(url) {
     xmlhttp.open("GET", url, true);
     xmlhttp.send();
 }
+
+
 var turn = 0;
 console.log(turn);
 function showdropdown(element){
