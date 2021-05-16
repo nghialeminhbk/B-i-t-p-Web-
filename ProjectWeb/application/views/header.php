@@ -20,9 +20,12 @@
         a:hover{
             color:  rgb(255, 165, 0);
         }
-
+        ol{
+            list-style: none;
+        }
         #main{
             margin-top: 50px;
+            background: #f6dcbf;
         }
         /* header  */
         .top_page{
@@ -101,10 +104,10 @@
             display: flex;
             flex-direction: row;
             align-items: center;
-            font-weight: 700;
         }
         #logo{
             color: white;
+            font-weight: 700;
         }
         .leftHeader a, .viewSearch{
             padding: 12px 15px;
@@ -118,10 +121,35 @@
             flex-direction: row;
             align-items: center;
             width: 60%;
+            position: relative;
         }
         #iconSearch{
             color: orange;
             border: none;
+        }
+        #searchMusic{
+            position: absolute;
+            display: none;
+            flex-direction: column;
+            margin-top: 0px;
+            margin-left: 1px;
+            /* box-sizing: content-box; */
+            top: 38px;
+            width: 75%;
+            min-width: 80px;
+            background: white;
+            box-shadow: 2px 2px 5px 2px rgb(155, 155, 151);
+            color: #000;
+            /* height: 150px;
+            overflow-y: auto;
+            overflow-x: hidden; */
+        }
+        #searchMusic .des-music{
+            border-bottom: 1px solid #aaaaaa;
+            padding: 10px;
+        }
+        #searchMusic .des-music .name a{
+            padding: 0;
         }
         .div-iconsearch{
             height: 23px;
@@ -256,7 +284,39 @@
             align-items: center;
         }
 
+        /* page-music  */
+        #page-music{
+            /* display: grid;
+            grid-template-columns: 1fr 0.75fr; */
+            display: flex;
+            justify-content: center;
+        }
 
+        .musicFrame, .inforDetailMusic{
+            background: white;
+            box-shadow: 2px 2px 5px 2px rgb(155, 155, 151);
+            padding: 10px 30px;
+            border: none;
+        }
+
+        .musicFrame{
+            margin-bottom: 30px;
+        }
+
+        .left-page-music{
+            padding: 30px 40px;
+        }
+
+        iframe{
+            padding: 30px 0;
+        }
+        .inforMusic{
+            border-bottom: 1px solid rgb(112, 112, 110);
+        }
+
+        .inforMusic, .loiBaiHat{
+            padding: 20px 0;
+        }
 
     </style>
 </head>
@@ -273,7 +333,7 @@
             <i class="iconHeader fa fa-bars" id="iconMenu" onclick="showMenu()"></i>
             <a href="http://localhost:8080/ProjectWeb/home" id="logo" class="viewLogo"><i class="fas fa-headphones-alt"></i> ENCHANTIST</a>
             <div id="viewSearchID" class="viewSearch">
-                <input type="search" id="searchHomePage" placeholder="Tìm theo bài hát hoặc ca sĩ" autocomplete="off">
+                <input type="search" id="searchHomePage" placeholder="Tìm theo bài hát hoặc ca sĩ" autocomplete="off" onkeyup="search(this.value)">
                 <ol id="searchMusic">
                 </ol>
                 <div class="div-iconsearch">

@@ -6,7 +6,7 @@
             <div class="left-music">
                 <p class="sttMusic"><?=$count++?>.</p>
                 <div class="des-music">
-                <p class="name"> <a href="http://localhost:8080/ProjectWeb/music/view/<?=$music['Music']['id']?>/<?=$music['Music']['name']?>"><?=$music['Music']['name']?></a></p>
+                    <p class="name"> <a href="http://localhost:8080/ProjectWeb/music/view/<?=$music['Music']['id']?>/<?=$music['Music']['category_id']?>"><?=$music['Music']['name']?></a></p>
                     <p class="singer"><?=$music['Music']['singer']?></p>
                 </div>
             </div>
